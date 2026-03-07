@@ -2,3 +2,7 @@ body {
     background-color: cornflowerblue;
     color:cornsilk;
 }
+
+header, main, nav, footer {
+    text-align: center;
+}
