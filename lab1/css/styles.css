@@ -14,3 +14,9 @@ nav a { /*links within "nav" container*/
     text-decoration: none; /*removes underline*/
     color:white; /*by default, links are blue*/
 }
+
+nav a:hover { /*pseudo class*/
+    border-bottom: 2px pink solid;
+    font-size: 2em;
+    transition: .9s; /*transition effect*/
+}
