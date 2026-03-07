@@ -20,3 +20,13 @@ nav a:hover { /*pseudo class*/
     font-size: 2em;
     transition: .9s; /*transition effect*/
 }
+
+navbar a:current {
+    color: lightpink;
+    font-weight: bold;
+}
+
+main{
+    display:flex;
+    justify-content: space-evenly;
+}
