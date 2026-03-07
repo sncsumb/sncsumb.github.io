@@ -1,8 +1,16 @@
 body {
-    background-color: cornflowerblue;
+    background-color:darkslategrey;
     color:cornsilk;
 }
 
 header, main, nav, footer {
     text-align: center;
+}
+
+nav a { /*links within "nav" container*/
+    padding:15px;
+    padding-bottom:4px;
+    font-size:1.8em;
+    text-decoration: none; /*removes underline*/
+    color:white; /*by default, links are blue*/
 }
