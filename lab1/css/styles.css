@@ -21,7 +21,7 @@ nav a:hover { /*pseudo class*/
     transition: .9s; /*transition effect*/
 }
 
-navbar a:current {
+nav a:current {
     color: lightpink;
     font-weight: bold;
 }
