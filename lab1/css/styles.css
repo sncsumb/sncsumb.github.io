@@ -7,6 +7,10 @@ header, main, nav, footer {
     text-align: center;
 }
 
+footer {
+    size: 5em;
+}
+
 nav a { /*links within "nav" container*/
     padding:15px;
     padding-bottom:4px;
