@@ -8,7 +8,7 @@ header, main, nav, footer {
 }
 
 footer {
-    size: 5em;
+    size: 2em;
 }
 
 nav a { /*links within "nav" container*/
