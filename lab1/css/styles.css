@@ -32,6 +32,16 @@ td strong {
     background-color:seagreen;
 }
 
+ul {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hobby {
+    color:pink;
+}
+
 nav a { /*links within "nav" container*/
     padding:15px;
     padding-bottom:4px;
