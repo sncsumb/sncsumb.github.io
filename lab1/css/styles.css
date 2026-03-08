@@ -11,6 +11,27 @@ footer {
     size: 2em;
 }
 
+table {
+    margin: 0px auto;
+}
+
+td {
+    padding-right: 10px;
+    font-size: 1.3em;
+}
+
+td strong {
+    color:pink
+}
+
+#table-header {
+    background-color: darkcyan;
+}
+
+.table-row {
+    background-color:seagreen;
+}
+
 nav a { /*links within "nav" container*/
     padding:15px;
     padding-bottom:4px;
@@ -30,7 +51,7 @@ a.active {
     font-weight: bold;
 }
 
-main{
+main {
     display:flex;
     justify-content: space-evenly;
 }
