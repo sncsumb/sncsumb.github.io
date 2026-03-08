@@ -25,7 +25,7 @@ nav a:hover { /*pseudo class*/
     transition: .9s; /*transition effect*/
 }
 
-.active {
+a.active {
     color: lightpink;
     font-weight: bold;
 }
