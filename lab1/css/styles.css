@@ -9,11 +9,7 @@ header, main, nav, footer {
 
 footer {
     size: 2em;
-    font-size: 2px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+    color:lightgreen;
 }
 
 table {
@@ -86,3 +82,10 @@ h1 {
   font-style: normal;
 }
 
+footer {
+    font-size: 2px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
