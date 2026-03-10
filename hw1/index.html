@@ -1,52 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts -->
+    <!-- Title Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Nav Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <!-- Reading Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- does not work here -->
-    <img src="images/BG_Assets.png" alt="bg assets" class="bg_asset">
-    <!-- Navigation Bar -->
-     <nav>        
-        <a href="index.html"> HOME </a>
-        <a href="overview.html"> OVERVIEW </a>
-        <a href="fnn.html"> FEEDFORWARD </a>
-        <a href="rnn.html"> RECURRENT </a>
-        <a href="cnn.html"> CONVOLUTED </a>
-     </nav>
+    <!-- Background Image -->
+    <img src="images/bg_asset.png" alt="bg assets" id="bg_asset">
 
-     <br><br>
+    <div class="base_page">
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html" class="active"> HOME </a>
+            <a href="overview.html"> OVERVIEW </a>
+            <a href="fnn.html"> FEEDFORWARD </a>
+            <a href="rnn.html"> RECURRENT </a>
+            <a href="cnn.html"> CONVOLUTED </a>
+            <a href="gan.html"> GENERATIVE </a>
+            <a href="credits.html"> CREDITS </a>
+        </nav>
 
-     <main>
-        <!-- Introduction -->
-        <div>
+        <br><br>
+
+        <main>
+            <!-- Introduction -->
             <!-- Neural Network -->
-            <div>
-            
+
+            <div id="introduction" class="textbox">
+                <!-- title -->
+                <div>
+                    <div class="title" id="home_title">NEURAL</div>
+                    <div id="subtitle"> networks</div>
+                </div>
+                <!-- text -->
+                <div class="text">
+                    Inspired by the human brain, a neural network is a computational machine learning algorithm that is
+                    composed of interconnected layers of nodes (neurons).
+                    Neural network excels at pattern recognition, information classification, and learning. It is a
+                    powerful tool used today! Click below to learn more.
+                </div>
+                <!-- Pseudo Button -->
+                <div id="learn_button">
+                    <a href="overview.html" class="flavor_text"> learn more </a>
+                </div>
             </div>
             <!-- Mascot -->
-             <div>
-
-             </div>
-        </div>
+            <figure>
+                <img src="images/Otter_NN.png" alt="otter mascot" style="margin-right: -100px;margin-top: 35px;">
+            </figure>
+        </main>
 
         <!-- About -->
-         <div>
-
-         </div>
-        
-        <!-- NN Categories --> 
-        <div>
-
+        <div id="about">
+            <!-- About Title-->
+            <div class="sec_title" id="about_title">ABOUT</div>
+            <!-- About Text -->
+            <div class="text">
+                Curious about neural networks? Well this site is for you! This site provides an overview of neural
+                networks and goes over the four types of neural networks.
+                The information include a basic interview where neural networks are described in more details.
+                Each neural network will also be further described, in addition to use cases, advantages, and
+                disadvantages.
+                I hope you enjoy going over different types of neural networks!
+            </div>
         </div>
-     </main>
 
-     <!-- CSUMB Logo -->
-      <footer>
+        <!-- NN Categories -->
+        <div>
+            <div class="flavor_text" style="margin-bottom: 20px; text-align: center;">
+                click below to find out more!
+            </div>
+            <!-- Secondary Navigation Container -->
+            <div class="nn_container">
+                <a href="fnn.html" class="nn_items_home title" id="hover"> FNN </a>
+                <a href="rnn.html" class="nn_items_home title"> RNN </a>
+                <a href="cnn.html" class="nn_items_home title"> CNN </a>
+                <a href="gan.html" class="nn_items_home title"> GAN </a>
+            </div>
+        </div>
+    </div>
 
-      </footer>
+    <!-- Footer -->
+    <footer>
+        <div id="footer_text">
+            NGO 2026 &copy; | CST 336 | HOMEWORK 1
+        </div>
+        <img src="images/CSUMB_Logo.png" alt="CSUMB Logo">
+    </footer>
+
 </body>
+<!-- CSUMB Logo -->
+
 </html>

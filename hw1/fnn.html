@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts -->
+    <!-- Title Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Nav Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <!-- Reading Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Image -->
+    <img src="images/bg_asset.png" alt="bg assets" id="bg_asset">
+
+    <div class="base_page">
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html"> HOME </a>
+            <a href="overview.html"> OVERVIEW </a>
+            <a href="fnn.html" class="active"> FEEDFORWARD </a>
+            <a href="rnn.html"> RECURRENT </a>
+            <a href="cnn.html"> CONVOLUTED </a>
+            <a href="gan.html"> GENERATIVE </a>
+            <a href="credits.html"> CREDITS </a>
+        </nav>
+
+        <br><br>
+
+        <main class="main_content">
+            <!-- Title -->
+            <!-- Neural Network -->
+            <div id="content_text">
+                <!-- title -->
+                <div>
+                    <div class="title" id="content_title">FEEDFORWARD NEURAL NETWORKS</div>
+                </div>
+                <!-- subtitle -->
+                <div class="textbox text">
+                    <!-- Overview -->
+                    <div class="sec_title">OVERVIEW</div>
+                    <hr>
+                    Feedforward Neural Network (FNN) is a neural network where information flows in a single direction.
+                    Furthermore, all input goes through the hidden layer and then to the output layer without any feedback or loops.
+                    FNNs process inputs independently, relying on back propagation where the error is propagated back through the network.
+                    The weights are then updated and adjusted using gradient descent. 
+                    Gradient descent is used often to train neural networks in minimizing errors between prediction and actual results.
+                    <!-- Figure -->
+                    <figure class="text" id="figure_text">
+                        <img src="images/fnn_overview.png" alt="neural network overview">
+                        <br>
+                        Figure provided by Serena Ngo
+                    </figure>
+
+                    <!-- Common Uses -->
+                    Applications of FNNs include pattern recognition tasks such as image and speech classification.
+                    <!-- Limitations -->
+                    <div class="sec_title">ADVANTAGES AND DISADVANTAGES</div>
+                    <hr>
+                    Neural networks are very adaptable as they can refine their output with more data it recevies. This gives neural networks the ability to "learn", with proficiency in pattern recognition and parallel processing. Because of this, they are able to model relationships in datasets in a non-linear way.
+                    However, this makes neural networks resource intensive. They are computionally heavy and require large datasets. Neural networks also fall victim of overfitting where they commit learning through memory rather than actually identifying relationships and problems.
+                    <!-- Types of NN -->
+                    <div class="sec_title">SEE MORE</div>
+                    <hr>
+                    <div class="nn_container">
+                        <div class="nn_items">
+                            <img src="images/small_fnn.png" alt="fnn">
+                            <br>
+                            <a href="fnn.html"> FEEDFORWARD </a>
+                        </div>
+                        <div class="nn_items">
+                            <img src="images/small_fnn.png" alt="fnn">
+                            <br>
+                            <a href="rnn.html"> RECURRENT </a>
+                        </div>
+                        <div class="nn_items">
+                            <img src="images/small_cnn.png" alt="fnn">
+                            <br>
+                            <a href="cnn.html"> CONVOLUTED </a>
+                        </div>
+                        <div class="nn_items">
+                            <img src="images/small_gan.png" alt="fnn">
+                            <br>
+                            <a href="gan.html"> GENERATIVE </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- CSUMB Logo -->
+    <footer>
+        <div id="footer_text">
+            NGO 2026 &copy; | CST 336 | HOMEWORK 1
+        </div>
+        <img src="images/CSUMB_Logo.png" alt="CSUMB Logo">
+    </footer>
+</body>
+
+</html>
