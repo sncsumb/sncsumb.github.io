@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview</title>
+    <title>RNN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonts -->
@@ -24,7 +24,7 @@
 
 <body>
     <!-- Background Image -->
-    <img src="images/bg_asset.png" alt="bg assets" id="bg_asset">
+    <!-- <img src="images/bg_asset.png" alt="bg assets" id="bg_asset"> -->
 
     <div class="base_page">
         <!-- Navigation Bar -->
@@ -53,42 +53,63 @@
                     <!-- Overview -->
                     <div class="sec_title">OVERVIEW</div>
                     <hr>
-                    Inspired by the human brain, a neural network is a computational machine learning algorithm that is
-                    composed of interconnected layers of nodes.
-                    This is similar to a human brain where neurons are connected to relay signals to other neurons!
-                    Also known as artificial neural network (ANN), neural network excels at pattern recognition,
-                    information classification, and learning.
-                    It is a powerful tool used today!
-                    <!-- Training -->
-                    To train a neural network, a node (or neuron) receives inputs of large datasets that are then adjusted with weights (input layer). Connections are then created and adjusted as well forming a complex neural network. This poriton of the network is also called the hidden layer. The process reiterates as more data is fed to the system, refining the weights as the network grows and minimizes errors between the network's prediction and actual values in the output layer.
-                    <br>
+                    Recurrent neural networks are a type of neural network that utilizes feedback loops, passing output data back as input data sequentially.
+                    This is done by utilizing a fundamental RNN unit called the recurrent unit. A recurrent unit holds a hidden state of its previous input, updating that input at each time step for every current input with it.
+                    This feedback mechanism enables RNNs to "remember and "learn" from past inputs while incorportating that knowledge into its current processing. This enables RNNs to capture patterns and dependencies within sequences across time.
                     <!-- Figure -->
                     <figure class="text" id="figure_text">
                         <img src="images/rnn_overview.png" alt="neural network overview">
                         <br>
-                        Figure provided by Serena Ngo
+                        Figure: Simplified diagram of a RNN. Image provided by Serena Ngo. See credits for references.
                     </figure>
 
                     <!-- Common Uses -->
-                    There are a wide range of applications that involves the use of neural networks. Some uses include image recognition, natural language processins, predictive modeling, and robotics. There are four types of neural networks: feedforward neural network, recurrent neural netwok, convolutional neural network, and generative adversarial network.
+                    Because of RNNs ability to learn through feedback loop of past inputs, RNNs excel at tasks such as handwriting recognition, speech recognition, natural language processing, image and video processing, and time-series predictions such as weather forcasting.
+                    <br>
+                    There are four types of RNNs:
+                    <ul>
+                        <li>
+                            one-to-one RNN: The simplest type of RNN architecture where there is a single input and a single output. 
+                            This is useful for binary classification where there is no sequential data involved.
+                        </li>
+                        <li>
+                            one-to-many RNN: This RNN architecture produces multiple outputs over time from a single input. 
+                            This is useful for where input triggers sequences of predictions. 
+                            This is seen with image captionaning where a single image can generate sequences of words as captions.
+                        </li>
+                        <li>
+                            many-to-one RNN: For this RNN architecture, it receives a sequence of inputs and generates a single output. 
+                            A use example of this is inputting a sentence (a sequence of words) and receiving a single output that may describe the sentence in one word. 
+                        </li>
+                        <li>
+                            many-to-many RNN: A sequence of inputs is processed and generates a sequence of outputs for many-to-many RNNs. 
+                            This is commonly used in language translation tasks where inputting text from one langauge can produce multiple translations of the given text.
+                        </li>
+                    </ul> 
+                    
                     <!-- Limitations -->
                     <div class="sec_title">ADVANTAGES AND DISADVANTAGES</div>
                     <hr>
-                    Neural networks are very adaptable as they can refine their output with more data it recevies. This gives neural networks the ability to "learn", with proficiency in pattern recognition and parallel processing. Because of this, they are able to model relationships in datasets in a non-linear way.
-                    However, this makes neural networks resource intensive. They are computionally heavy and require large datasets. Neural networks also fall victim of overfitting where they commit learning through memory rather than actually identifying relationships and problems.
+                    Recurrent neural networks core advantages include being able to retain information from previous inputs. This makes RNNs good for anything that requires sequential memory, such as time-series predictions.
+                    RNNs are also powerful when combined with other neural networks, such as convolutional neural networks </a>. 
+                    This creates an enhanced model that can improve performance on image and video data processing.
+                    However, RNNs suffers when it comes to learning from long-term dependencies. RNNs faces a main training challenge: vanishing gradient problem. 
+                    A vanishing gradient is when there is instablity in the training process due to earlier gradients shrinking. 
+                    This happens in RNNs when output is fed back as input continously, creating multitudes of calculations of earlier weights which causes the gradient to shrink. 
+                    Because of this, RNNs suffer from long term learning.
                     <!-- Types of NN -->
                     <div class="sec_title">SEE MORE</div>
-                    <hr>
+                    <hr>         
                     <div class="nn_container">
+                        <div class="nn_items">
+                            <img src="images/small_overview.png" alt="fnn">
+                            <br>
+                            <a href="overview.html"> OVERVIEW </a>
+                        </div>
                         <div class="nn_items">
                             <img src="images/small_fnn.png" alt="fnn">
                             <br>
                             <a href="fnn.html"> FEEDFORWARD </a>
-                        </div>
-                        <div class="nn_items">
-                            <img src="images/small_rnn.png" alt="fnn">
-                            <br>
-                            <a href="rnn.html"> RECURRENT </a>
                         </div>
                         <div class="nn_items">
                             <img src="images/small_cnn.png" alt="fnn">

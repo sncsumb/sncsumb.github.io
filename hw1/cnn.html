@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview</title>
+    <title>CNN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonts -->
@@ -24,7 +24,7 @@
 
 <body>
     <!-- Background Image -->
-    <img src="images/bg_asset.png" alt="bg assets" id="bg_asset">
+    <!-- <img src="images/bg_asset.png" alt="bg assets" id="bg_asset"> -->
 
     <div class="base_page">
         <!-- Navigation Bar -->
@@ -53,33 +53,60 @@
                     <!-- Overview -->
                     <div class="sec_title">OVERVIEW</div>
                     <hr>
-                    Inspired by the human brain, a neural network is a computational machine learning algorithm that is
-                    composed of interconnected layers of nodes.
-                    This is similar to a human brain where neurons are connected to relay signals to other neurons!
-                    Also known as artificial neural network (ANN), neural network excels at pattern recognition,
-                    information classification, and learning.
-                    It is a powerful tool used today!
-                    <!-- Training -->
-                    To train a neural network, a node (or neuron) receives inputs of large datasets that are then adjusted with weights (input layer). Connections are then created and adjusted as well forming a complex neural network. This poriton of the network is also called the hidden layer. The process reiterates as more data is fed to the system, refining the weights as the network grows and minimizes errors between the network's prediction and actual values in the output layer.
+                    Convolutional neural network (CNN) is a a type of deep learning, feedforward neural network that contains multiple, different layers for training.  
+                    It learns features through a filter (kernel) optimization and designed to process structured grid-like data by capturing spatial relationships between pixels. 
+                    The hidden layers of the CNN include one or more layers that perform convolutions.
+                    The hidden layer includes the feature extraction area and the neural network (as seen in the figure).
+                    The convolution operation generates a feature map, which then becomes the input for the next layer. 
+                    Other key components of CNNs include:
+                    <ul>
+                        <li>
+                            convolutional layer: extracts features from the input data using filters or kernels. 
+                            This layer helps preserve the spatial relationships between pixels.
+                        </li>
+                        <li>
+                            pooling layer: reduces the dimensions of data by combining outputs of neuron clusters at one layer into a single neuron in the next layer. 
+                            This allows for faster computation and reduce in memory use.
+                        </li>
+                        <li>
+                            flattening: converts multi-dimensional features of the map into a one-dimensional vector after convolution and pooling. This layer is then passed into the fully connected layer.
+                        </li>
+                        <li>
+                            fully connected layer: connects every neuron in one layer to every neuron in another layer. This layer can be seen in the neural network of the figure.
+                        </li>
+                    </ul>
                     <br>
+                    CNNs can process and predict from various types of data, such as text, images, and audio.
+                    They do not suffer from vanishing and exploding gradients, unlike RNNs. This is because of regularization that comes form using shared weights over fewer connections.
+
                     <!-- Figure -->
                     <figure class="text" id="figure_text">
                         <img src="images/cnn_overview.png" alt="neural network overview">
                         <br>
-                        Figure provided by Serena Ngo
+                        Figure: Simplified diagram of a CNN. Image provided by Serena Ngo. See credits for references.
                     </figure>
 
                     <!-- Common Uses -->
-                    There are a wide range of applications that involves the use of neural networks. Some uses include image recognition, natural language processins, predictive modeling, and robotics. There are four types of neural networks: feedforward neural network, recurrent neural netwok, convolutional neural network, and generative adversarial network.
+                    CNNs excel in deep-learning tasks and computer vision, including image processing. They popularly used for image-relayed tasks.
+                    Some applications of CNNs include image and video recognition, image and video classification, segmentation and analysis, brain-computer interfaces. 
+                    Some more specific use cases are financial time-series, drug discovery, anomaly detection, and learning of board games.
                     <!-- Limitations -->
                     <div class="sec_title">ADVANTAGES AND DISADVANTAGES</div>
                     <hr>
-                    Neural networks are very adaptable as they can refine their output with more data it recevies. This gives neural networks the ability to "learn", with proficiency in pattern recognition and parallel processing. Because of this, they are able to model relationships in datasets in a non-linear way.
-                    However, this makes neural networks resource intensive. They are computionally heavy and require large datasets. Neural networks also fall victim of overfitting where they commit learning through memory rather than actually identifying relationships and problems.
+                    Advantages of convolutional neural networks include effective learning and detecting of spatial patterns, edges, textures, and shapres.
+                    CNNs are also robust in translation, rotation, and scaing of input data. This makes CNNs great for learning important features from videos, images, and audio.
+                    Lastly, CNNs support end-to-end training, making the model pipeline simple.
+                    Like all neural networks, CNNs require high computational power and memory space. They are also prone to overfitting and require large amounts of annotated data for quality training and performance.
+                    CNNs are also sensitive to noisey data and adversarial inputs.
                     <!-- Types of NN -->
                     <div class="sec_title">SEE MORE</div>
                     <hr>
                     <div class="nn_container">
+                        <div class="nn_items">
+                            <img src="images/small_overview.png" alt="fnn">
+                            <br>
+                            <a href="cnn.html"> OVERVIEW </a>
+                        </div>
                         <div class="nn_items">
                             <img src="images/small_fnn.png" alt="fnn">
                             <br>
@@ -89,11 +116,6 @@
                             <img src="images/small_rnn.png" alt="fnn">
                             <br>
                             <a href="rnn.html"> RECURRENT </a>
-                        </div>
-                        <div class="nn_items">
-                            <img src="images/small_cnn.png" alt="fnn">
-                            <br>
-                            <a href="cnn.html"> CONVOLUTED </a>
                         </div>
                         <div class="nn_items">
                             <img src="images/small_gan.png" alt="fnn">

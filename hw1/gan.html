@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overview</title>
+    <title>GAN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonts -->
@@ -24,7 +24,7 @@
 
 <body>
     <!-- Background Image -->
-    <img src="images/bg_asset.png" alt="bg assets" id="bg_asset">
+    <!-- <img src="images/bg_asset.png" alt="bg assets" id="bg_asset"> -->
 
     <div class="base_page">
         <!-- Navigation Bar -->
@@ -53,33 +53,85 @@
                     <!-- Overview -->
                     <div class="sec_title">OVERVIEW</div>
                     <hr>
-                    Inspired by the human brain, a neural network is a computational machine learning algorithm that is
-                    composed of interconnected layers of nodes.
-                    This is similar to a human brain where neurons are connected to relay signals to other neurons!
-                    Also known as artificial neural network (ANN), neural network excels at pattern recognition,
-                    information classification, and learning.
-                    It is a powerful tool used today!
-                    <!-- Training -->
-                    To train a neural network, a node (or neuron) receives inputs of large datasets that are then adjusted with weights (input layer). Connections are then created and adjusted as well forming a complex neural network. This poriton of the network is also called the hidden layer. The process reiterates as more data is fed to the system, refining the weights as the network grows and minimizes errors between the network's prediction and actual values in the output layer.
+                    Generative adversarial networks (GAN) are composed of a generator and discriminator that compete against each other and improve together.  
+                    Unlike the other neural networks that only recognizes or classifies data, GANs generates entirely new data in an attempt to resemble real-world data.
                     <br>
+                    The generator is a deep neural network that creates data by taking random noise as input. 
+                    This assists in generating realistic datasets and uses patterns to learn the input by adjusting internet paramenters using backpropagation.
+                    The discriminator assesses authenticity of the generated data by acting as a binary classifier that compares real and generated data.
+                    The discriminator also uses convolutional layers and other relevant architecture when dealing with image data, extracting features and improving the model's ability.
+                    By detecting fake samples more accurately with the discriminator, GANs can improve classification and refine parameters.
+                    <br>
+                    <!-- Training -->
+                    To train generative adversial network, the gererator first starts with random noisey inputs. 
+                    The generator then creates fake data samples and transforms the noise into something that looks like real data.
+                    The discriminator then receives the fake samples from the generator in addition to real samples from an actual training dataset.
+                    The two inputs are then analyzed and the discriminator outputs a probability score between 0 and 1: 1 meaning the data is likely real and 0 meaning the data is likely fake.
+                    Adversarial learning then takes place with the probability score taken into consideration. This is also when the discriminator and generator competes against each other.
+                    If the discriminator successfully classifies the real or fake data with the correct score, it improves on its job of identifying which data is what.
+                    If the generator is able to create fake data that the discriminator marks with a score of 1, the generator receives a positive update and the dicriminator gets penalized.
+                    The generator then learns from its successes, improving and creating more convincing fake samples.
+                    The discriminator then adapts, updating itself to improve spotting fake data. This competition continously happens, strengthening both generator and discriminator.
+                    The goal of the training is for the generator to be able to produce highly effective fakes to the point where the discriminator struggles to distinguish between real and fake data. 
                     <!-- Figure -->
                     <figure class="text" id="figure_text">
-                        <img src="images/nn_overview_copy.png" alt="neural network overview">
+                        <img src="images/gan_overview.png" alt="neural network overview">
                         <br>
-                        Figure provided by Serena Ngo
+                        Figure: Simplified diagram of a GAN. Image provided by Serena Ngo. See credits for references.                    
                     </figure>
-
+                    <br>
+                    <!-- Types of GAN -->
+                    There five different types of GANs with distinguished purposes.
+                    <ul>
+                        <li>
+                            Vanilla GAN: The simplest type of GAN that contains a generator and discriminator that are both made with multi-layer perceptrons (MLPs).
+                            MLPs are a type of feedforward neural network that is capable of distinguishing data that is not lineraly separable.
+                        </li>
+                        <li>
+                            Conditional GAN (CGAN): The generator contains an additional conditional parameter to assist in the generation process.
+                            With this, the generator produces more specific outputs instead of a random one based on a label.
+                        </li>
+                        <li>
+                            Deep Convolutional GAN (DCGAN): This GAN is the most popular types used for image generation.
+                            This GAN also implements CNNs instead of MLPs into its training, removing the fully connected layer that is commonly used in CNNs and replacing pooling layers with convolutional stride.
+                            This makes the model more efficient and allow for better spatial understanding of images.
+                        </li>
+                        <li>
+                            Laplcian Pyramid GAN (LAPGAN): This GAN uses multi-resolution approach to generate images of ultra high quality.
+                            The GAN uses multiple generator and discriminators at each layer and CGAN to upscale the results.
+                            This allows images to gradually refine in higher quality details, reducint noise and improving clarity.
+                        </li>
+                        <li>
+                            Super Resolution GAN (SRGAN): This GAN is designed to increase resolution of low quality images while reducing common image upscaling errors (such as blurriness and pixelation) and preserving details.
+                            It also adds finder details to make the image appear more realistic and sharper.
+                            SRGAN uses deep neural network with an adversarial loss function to achieve this goal.
+                            
+                        </li>
+                    </ul> 
+                    
                     <!-- Common Uses -->
-                    There are a wide range of applications that involves the use of neural networks. Some uses include image recognition, natural language processins, predictive modeling, and robotics. There are four types of neural networks: feedforward neural network, recurrent neural netwok, convolutional neural network, and generative adversarial network.
+                    Generative adversarial networks excel in image synthesis and generation, image-to-image translation, text-to-image generation, data augmentation, and high-resolution image enhancement.
                     <!-- Limitations -->
                     <div class="sec_title">ADVANTAGES AND DISADVANTAGES</div>
                     <hr>
-                    Neural networks are very adaptable as they can refine their output with more data it recevies. This gives neural networks the ability to "learn", with proficiency in pattern recognition and parallel processing. Because of this, they are able to model relationships in datasets in a non-linear way.
-                    However, this makes neural networks resource intensive. They are computionally heavy and require large datasets. Neural networks also fall victim of overfitting where they commit learning through memory rather than actually identifying relationships and problems.
+                    Advantages of GANs include synthetic data generation, producing synthetic data that resembles real data which is useful for augmentation and anomaly detection.
+                    Results can be considered high qualtiy, especially when upscaling older images. 
+                    GANs do not require annotated data when training, allowing it to learn unsupervised which saves time and money.
+                    Lasly, GANs are very versatile in the various tasks that it can complete.
+                    <br>
+                    Since GANs run two neural networks (generator and discriminator), GANs requires extreme computational power and resource intensive.
+                    Training instability is also experienced with GANs. There are chances where the generator and discriminator do not converge properly, producing poor-quality outputs.
+                    GANs also faces mode collapse where limited variety of data is produced by the generator. This indicates that the generator has failed to capture the full diversity of the training dataset.
+                    Ensuring ethical use is also a growing concern since GANs can be used to create fakes images and videos with harmful intent (deep fakes).
                     <!-- Types of NN -->
                     <div class="sec_title">SEE MORE</div>
                     <hr>
                     <div class="nn_container">
+                        <div class="nn_items">
+                            <img src="images/small_overview.png" alt="fnn">
+                            <br>
+                            <a href="overview.html"> OVERVIEW </a>
+                        </div>
                         <div class="nn_items">
                             <img src="images/small_fnn.png" alt="fnn">
                             <br>
@@ -94,11 +146,6 @@
                             <img src="images/small_cnn.png" alt="fnn">
                             <br>
                             <a href="cnn.html"> CONVOLUTED </a>
-                        </div>
-                        <div class="nn_items">
-                            <img src="images/small_gan.png" alt="fnn">
-                            <br>
-                            <a href="gan.html"> GENERATIVE </a>
                         </div>
                     </div>
                 </div>
