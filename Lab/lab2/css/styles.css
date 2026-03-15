@@ -1,0 +1,114 @@
+/* Base Elements */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bg_element {
+    height: 1000px;
+    width: 100% auto;
+    background-color: #070806;
+    background-image: url("../images/line_details.png"), radial-gradient(#1C4116,#12260F,#070806);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+}
+
+.primary_text {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #6BFA55;
+    filter: drop-shadow(4px 4px 14px rgba(107,250,85,0.8));
+
+}
+
+.secondary_text {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color:#3CAE2B;
+}
+
+/* Text Properties */
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    margin-bottom: -65px;
+}
+
+#instructions_text {
+    font-size: 12px;
+}
+
+#guesses_text {
+    font-size: 30px;
+    color:#6BFA55
+}
+
+.add_info_text {
+    font-size: 14px;
+    color: #3CAE2B;
+}
+
+.scores_text {
+    font-size: 14px;
+    color:#6BFA55;
+}
+
+/* Content Area */
+#content_box {
+    background-color: #070806;
+    width: 300px;
+    height: 200px;
+    padding: 15px;
+    border: 0.5px solid #6BFA55;
+    filter: drop-shadow(4px 4px 14px rgba(107,250,85,0.5));
+    margin: 15px;
+}
+
+/* Input box */
+input {
+    color:#6BFA55;
+    background-color: #070806;
+    border: 1px solid #6BFA55;
+}
+
+button {
+    color: #6BFA55;
+    background-color: #070806;
+    border: 0.5px solid #6BFA55;
+}
+
+/* Number Tracking */
+.add_info_layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Divider */
+hr {
+    color: #3CAE2B;
+    border: 1px dashed #3CAE2B;
+    height: 1px;
+    width: 500px
+}
+
+/* Footer */
+#footer_text {
+    font-size: 12px;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess a Number</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg_element">
+
+    <header class="secondary_text">
+        <!-- Top section for Win and Losses-->
+        <div> 
+            wins:
+            <span id ="wins"></span>
+            losses:
+            <span id ="losses"></span>
+            <hr>
+            <h2 class="secondary_text">guess the</h2>
+            <br>
+            <h1 class="primary_text">number</h1>
+            <hr>
+        </div>
+    </header>
+    <br>
+    <div id="main">
+        <!-- Game Title -->
+        <!-- Game Area -->
+        <div id="content_box">
+            <!-- Instructions -->
+            <div class="secondary_text" id="instructions_text">>>INPUT A NUMBER BETWEEN 1 AND 99 BELOW</div>
+            <br>
+            <!-- Input Area  -->
+            <div class="secondary_text" id="instructions_text">>
+                <input type="text" id="playerGuess" size="5">
+                <!-- Button for Guess and Reset -->
+                <button id="guessBtn"> guess </button>
+                <button id="resetBtn"> reset </button>
+                <br>
+                <div id="feedback" style="margin-top:10px;"></div>
+            </div> 
+            <br>
+        </div>
+        <hr>
+        <div class="add_info_layout">
+            <!-- Attempts -->
+            <div class="secondary_text add_info_text"> attempts left:
+                <br>
+                <span class="scores_text" id="attempts"></span> / 07
+            </div>
+            <br>
+            <!-- Previous Guesses -->
+            <div class="secondary_text add_info_text"> previous guesses:
+                <br>
+                [ <span class="scores_text" id="guesses"></span> ]
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+    <hr>
+    <!-- Footer -->
+    <footer class="secondary_text" id="footer_text">NGO 2026 &copy; | Lab 2 | CSUMB </footer>
+</body>
+</html>
