@@ -218,7 +218,7 @@ function displayMultipleAnswerQuestion(pos, id, question_string, choices) {
     for (let i = 0; i < choices.length; i++) {
         let maChoice = choices[i];
         root_div.innerHTML += `<input type="checkbox" id="${id}_${maChoice}">
-        <label for="${id}_${maChoice}" class="subtitle">${maChoice}</label>`
+        <label for="${id}_${maChoice}" class="subtitle checkbox_prop">${maChoice}</label>`
     }
 
     //Listen to user's click

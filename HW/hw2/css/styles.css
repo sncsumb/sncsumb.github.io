@@ -295,6 +295,6 @@ select {
 }
 
 /* Multiple Answers */
-input[type="checkbox"] {
-    margin-left: 5px;
+.checkbox_prop {
+    margin-right: 25px;
 }
