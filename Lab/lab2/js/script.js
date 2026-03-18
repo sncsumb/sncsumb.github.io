@@ -1,8 +1,4 @@
-/*ISSUES:
-TODO: CSS
-TODO: Win State and Lose State
-*/
-// Event Listeneres
+// Event Listeners
 document.querySelector("#guessBtn").addEventListener("click", checkGuess);
 document.querySelector("#resetBtn").addEventListener("click", initializeGame);
 

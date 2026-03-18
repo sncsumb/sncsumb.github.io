@@ -1,12 +1,13 @@
-//TODO: Score not appearing
-//TODO: Bootstrap
+//TODO: Web storage
+//TODO: Add images
+//Fix side box
 
 // Event Listeners
 document.querySelector("#submitBtn").addEventListener("click", submitQuiz);
 document.querySelector("#resetBtn").addEventListener("click", initializeGame);
 
 // Global Variableslet score = 0;
-let attempts = 0;
+let attempts = localStorage.getItem("attempts") || 0;
 let userAnswer = {} //create a dictionary for user answers - will be compared to dict question answers
 
 // Dictionary holding question types - 5 question types
@@ -89,6 +90,38 @@ const questions = [
         answer: ["Superior", "Michigan", "Huron", "Ontario", "Erie"]
     },
 ]
+
+
+function initializeGame() {
+    // Hide Reset Button
+    document.querySelector("#resetBtn").classList.add("d-none");
+    // Show Submit Button
+    document.querySelector("#submitBtn").classList.remove("d-none");
+    //Reset user answer
+    userAnswer = {};
+    // Show past attempts
+    totalAttempts = document.querySelector("#attempts");
+    totalAttempts.textContent = attempts;
+
+    for (let i = 0; i < questions.length; i++) {
+        let question = questions[i];
+        if (question.type == 1) {
+            displayMultipleChoiceQuestion(i, question.id, question.question, shuffleArray(question.choices));
+        }
+        if (question.type == 2) {
+            displayDropDownQuestion(i, question.id, question.question, question.choices);
+        }
+        if (question.type == 3) {
+            displayImageSelectQuestion(i, question.id, question.question, question.choices);
+        }
+        if (question.type == 4) {
+            displayInputQuestion(i, question.id, question.question);
+        }
+        if (question.type == 5) {
+            displayMultipleAnswerQuestion(i, question.id, question.question, shuffleArray(question.choices));
+        }
+    }
+}
 
 // Multiple Choice Questions
 function displayMultipleChoiceQuestion(pos, id, question_string, choices) {
@@ -241,35 +274,6 @@ function displayMultipleAnswerQuestion(pos, id, question_string, choices) {
     }
 }
 
-function initializeGame() {
-    
-    // Hide Reset Button
-    document.querySelector("#resetBtn").classList.add("d-none");
-    // Show Submit Button
-    document.querySelector("#submitBtn").classList.remove("d-none");
-    //Reset user answer
-    userAnswer = {};
-
-    for (let i = 0; i < questions.length; i++) {
-        let question = questions[i];
-        if (question.type == 1) {
-            displayMultipleChoiceQuestion(i, question.id, question.question, shuffleArray(question.choices));
-        }
-        if (question.type == 2) {
-            displayDropDownQuestion(i, question.id, question.question, question.choices);
-        }
-        if (question.type == 3) {
-            displayImageSelectQuestion(i, question.id, question.question, question.choices);
-        }
-        if (question.type == 4) {
-            displayInputQuestion(i, question.id, question.question);
-        }
-        if (question.type == 5) {
-            displayMultipleAnswerQuestion(i, question.id, question.question, shuffleArray(question.choices));
-        }
-    }
-}
-
 //Validate quiz
 function isQuizValid(userAnswer) {
     let isValid = true;
@@ -308,11 +312,20 @@ function checkAnswer(pos, id) {
 
     //For correct answers - display text in green and add +10
     if (isCorrect) {
-        feedback.textContent = "Correct answer!";
+        feedback.innerHTML = `
+            <div style="display:flex; align-items:center; gap:8px;">
+                <img src="images/check.png" width=20>
+                <span>Correct answer!</span>
+            </div>`;
+
         feedback.style.color = "#7FBA6D";
         score += 10;
     } else { //For incorrect answers - display text in red
-        feedback.textContent = `Incorrect answer! Correct answer: ${correctAnswer}`;
+        feedback.innerHTML = `
+        <div style="display:flex; align-items:center; gap:8px;">
+            <img src="images/x.png" width=20>
+            <span>Incorrect answer! Correct answer: ${correctAnswer}</span>
+        </div>`;
         feedback.style.color = "#FF1111"
     }
 }
@@ -361,6 +374,7 @@ function submitQuiz() {
     console.log("Final Score:", score);
     //Count attempt
     attempts++;
+    localStorage.setItem("attempts", attempts); //save attemps to web storage
     const totalAttempts = document.querySelector("#attempts");
     totalAttempts.textContent = `${attempts}`;
     gameOver();
