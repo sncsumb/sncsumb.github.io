@@ -96,7 +96,8 @@ h2 {
     background-color: #B93131;
     width: 195px;
     height: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 #resetBtn {
@@ -291,4 +292,9 @@ select {
 /* Image Properties */
 .img_container {
     margin-right: 10px;
+}
+
+/* Multiple Answers */
+input[type="checkbox"] {
+    margin-left: 5px;
 }
