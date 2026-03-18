@@ -1,0 +1,294 @@
+html, body {
+    /* Fill page screen */
+    height: 100%;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+}
+
+/* Background Properties */
+.bg_element {
+    /* Keep background fixed */
+    position: relative;
+    z-index: 1;
+    background-color: #15131A;
+}
+
+.bg_element::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../images/bg_assets.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}
+
+/* Text */
+#title {
+    position: relative;
+    display: inline-block;
+}
+
+.main_title {
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+.outline_title {
+    position: absolute;
+    inset: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px #E6D154; /* shadow color */
+    transform: translate(0px, 5px);
+    z-index: 1;
+}
+h1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color:white;
+    font-size: 100px;
+}
+
+h2 {
+    margin-top: 15px
+}
+
+.subtitle {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color: white;
+    letter-spacing: 5px;
+}
+
+#flavor_text {
+    font-family: "Island Moments", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 100px;
+    margin-bottom: -70px;
+}
+
+/* Buttons */
+#playBtn {
+    background-color: #B93131;
+    width: 195px;
+    height: 40px;
+    margin-top: 150px;
+}
+
+#submitBtn {
+    background-color: #B93131;
+    width: 195px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+#resetBtn {
+    background-color: #56585B;
+    width: 195px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.btn-primary {
+    border-color: #15131A;
+}
+
+.btn-primary:focus {
+    border-color: 0 0 0 0.25rem rgba(230, 209, 84, 1.0);
+}
+
+.btn-hover {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-hover:hover {
+    background-color: #E6D154 !important;
+    border-color: #15131A;
+    color: #15131A;
+}
+
+.custom-hover:hover {
+    border: 2px #E6D154;
+}
+
+.bottom-shadow {
+    box-shadow: 0 4px 6px rgba(21, 19, 26, 1.0);
+}
+
+/* Navigation */
+.navbar {
+    background-color: transparent !important;
+}
+.navbar .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white !important;
+}
+
+.navbar .nav-link.action { /*Create an underline on active page*/
+    position: relative;
+    color: white !important;
+    display: in-block;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    width: 0%;
+    background-color: white;
+}
+
+.navbar .nav-link:hover {
+    color: #E6D154;
+}
+
+.navbar .nav-link:hover::after, 
+.navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+/* Quiz Properties */
+#question_container {
+    background-color: #15131A;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.choices_text {
+    font-family: "Imprima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    font-size: 20px;
+}
+
+.question_text {
+    font-size: 35px;
+    color:white;
+}
+
+.question_num {
+    font-size: 18px;
+    color:#56585B;
+}
+
+/* Scoring and Counting Properties */
+.correct-answer {
+    border: 2px solid #7FBA6D;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#add_info_container {
+    background-color: #15131A;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 300px;
+    color: white;
+}
+
+/* Feedback */
+.question-feedback {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Multiple Choice Properties */
+.custom-radio {
+    cursor: pointer;
+    font-family: "Imprima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    font-size: 20px;
+}
+
+.custom-radio input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #15131A;
+    border-radius: 50%;
+}
+
+.custom-radio input[type="radio"]:hover {
+    border-color: #E6D154;
+}
+
+.choice-box {
+    border: 2px solid #56585B;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    font-family: "Imprima", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+}
+
+.choice-box input[type="radio"] {
+    display: none; /* hide the radio button */
+}
+
+.choice-box:hover {
+    border-color: #E6D154;
+}
+
+.choice-box.selected {
+    background-color: #E6D154;
+    color: #15131A; /* text color changes when selected */
+    border-color: #E6D154;
+}
+
+/* Dropdown properties */
+select {
+    background-color: #15131A;
+    border: 1px solid #56585B;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+/* Image Properties */
+.img_container {
+    margin-right: 10px;
+}
