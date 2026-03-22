@@ -20,43 +20,43 @@
                 <div class="row">
                     <div class="col">
                         <form action="welcome.html" id="signupForm">
-                            first name:<input type="text" name="fName" class="input-area"><br>
-                            last name: <input type="text" name="lName"class="input-area"><br>
+                            first name:<input type="text" name="fName" class="input-area input-text"><br>
+                            last name: <input type="text" name="lName"class="input-area input-text"><br>
                             <div id="gender-form">
                                 Gender:
-                                <input type="radio" name="gender" value="m" id="gender-form">Male
-                                <input type="radio" name="gender" value="f">Female<br>
+                                <input type="radio" name="gender" value="m" id="gender-form" class="input-text">Male
+                                <input type="radio" name="gender" value="f" class="input-text">Female<br>
                             </div> 
-                            zip code: <input type="text" id="zip" name="zip" class="input-area"><br>
-                            city: <span id="city"></span> <br>
-                            latitude: <span id="latitude"></span><br>
-                            longitude: <span id="longitude"></span><br><br>
+                            zip code: <input type="text" id="zip" name="zip" class="input-area input-text"><br>
+                            <span id="zipError"></span><br>
+                            city: <span id="city" class="input-text"></span> <br>
+                            latitude: <span id="latitude" class="input-text"></span><br>
+                            longitude: <span id="longitude" class="input-text"></span><br><br>
                             <div id="drop-down">
                                 state:
-                                <select id="state" name="state" class="input-area">
+                                <select id="state" name="state" class="input-area input-text">
                                     <option>Select One</option>
                                     <option value="ca">California</option>
                                     <option value="ny">New York</option>
                                     <option value="tx">Texas</option>
                                 </select> <br>
-                                select a county: <select id="county" class="input-area"><option>Select One</option></select><br>
+                                select a county: <select id="county" class="input-area input-text"><option>Select One</option></select><br>
                             </div>    
-                            desired username: <input type="text" id="username" name="username" class="input-area"><br>
+                            desired username: <input type="text" id="username" name="username" class="input-area input-text"><br>
                             <span id="usernameError"></span><br>
-                            password: <input type="password" id="password" name="password" class="input-area"><br>
+                            password: <input type="password" id="password" name="password" class="input-area input-text"><br>
                             <span id="suggestedPwd"></span><br>
-                            type password again: <input type="password" id="retypePwd" name="retypePwd" class="input-area"><br>
+                            type password again: <input type="password" id="retypePwd" name="retypePwd" class="input-area input-text"><br>
                             <span id="passwordError"></span>
                             <input type="submit" value="sign up!" id="button">
-                            <footer id="text-form">
-                                NGO 2026 (c) | CSUMB | LAB 3
-                            </footer> 
-                        </form> 
+                        </form>     
                     </div>
                 </div>   
             </div>
         </main>
-
+        <footer id="text-form">
+            NGO 2026 &copy; | CSUMB | LAB 3
+        </footer> 
         <script src="js/script.js"></script>
     </body>
 </html>

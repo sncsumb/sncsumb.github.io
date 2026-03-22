@@ -18,13 +18,21 @@ async function displayCity() {
     // await forces JS to complete retrieving data
     let response = await fetch(url);
     let data = await response.json(); // convert data to JSON format
-    // city
-    document.querySelector("#city").innerHTML = data.city; //display city name
+    let zipError = document.querySelector("#zipError"); // for error message
+
+    if (data) { //if zipcode found
+        // city
+        document.querySelector("#city").innerHTML = data.city; //display city name
      // latitude
-    document.querySelector("#latitude").innerHTML = data.latitude;
+        document.querySelector("#latitude").innerHTML = data.latitude;
     // longitude
-    document.querySelector("#longitude").innerHTML = data.longitude;
-    console.log(data);
+        document.querySelector("#longitude").innerHTML = data.longitude;
+        zipError.innerHTML = "";
+    } else { //if zipcode not found
+        zipError.innerHTML = "Zipcode not found.";
+        zipError.style.color = "red";
+    }
+
 }
 
 // Displaying counties from Web AOI based on the two-letter abbreviation of a state
@@ -49,7 +57,7 @@ async function checkUsername() {
     let usernameError = document.querySelector("#usernameError");
     if (data.available) {
         usernameError.innerHTML = "Username available!";
-        username.style.color = "green";
+        usernameError.style.color = "green";
     } else {
         usernameError.innerHTML = "Username taken.";
         usernameError.style.color = "red";
