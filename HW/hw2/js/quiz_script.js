@@ -1,5 +1,3 @@
-//TODO: Web storage
-//TODO: Add images
 //Fix side box
 
 // Event Listeners

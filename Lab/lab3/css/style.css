@@ -1,0 +1,97 @@
+body {
+    background: radial-gradient(circle at 20% 20%, rgba(102, 138, 255, 0.4), transparent) 55%, 
+    radial-gradient(circle at 90% 15%, rgba(241, 156, 249, 0.5), transparent 40%), 
+    radial-gradient(circle at 20% 130%, rgba(254, 190, 0, 1), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(241, 156, 249, 0.5), transparent 40%),
+    radial-gradient(circle at 50% 0%, rgba(255, 198, 0, 0.4), transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(102, 138, 255, 0.4), transparent) 45%;
+    min-height: 100vh;
+}
+.container {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 60%;
+    height: 100%;
+    align-items: center;
+    padding: 60px;
+    border-radius: 0 150px 0 150px;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 10px
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#gender-form {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: -76px;
+    padding: 56px;
+    margin-right: 257px;
+    font-family: "Over the Rainbow", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#form-text {
+    font-family: "Numans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#button {
+    color: white;
+    background-color: #90C562;
+    border: none;
+    border: none;
+    width: 102px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.input-area {
+    color: black;
+    background-color: #F0ECDE;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    font-size: 15px;    
+}
+
+select {
+    height: 28px;
+}
+
+#drop-down {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
