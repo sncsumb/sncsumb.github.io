@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hero List Page</title>
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    
+    <main>
+        <!-- Navigation Area -->
+         <div class="nav-section">
+            <img src="images/deadlock_logo_hori.png">
+            <nav>
+                <a href="index.html" class="active">HEROES</a>
+                <a href="credits.html">CREDITS</a>
+            </nav>
+         </div>
+
+
+        <h1 id="hero-list-title">CHOOSE A HERO TO LEARN</h1>
+        <div class="subtitle">
+            Heroes are playable characters in Deadlock. Each have unique abilities and play style that can shape the overall teamplay.
+            Select a hero to learn more!
+        </div>
+
+        <!-- Search/Filter Area -->
+        <div id="search-container">
+            <!-- Search Bar -->
+            <h2>Search and Filter Heroes</h2> 
+            <form>
+                Search <input type="text" id="filterHeroes"> <br>
+                    <span id="filterError" class="section-title"></span>
+            </form>
+        </div>
+
+         <!-- Heroes Area  -->
+         <div id="hero-list">
+            <div id="hero-items">
+                
+            </div>
+         </div> 
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
     <!-- Footer -->
-     <footer>Used for academic purposes only</footer>
+    <footer>
+        NGO 2026 &copy; | CSUMB | HW3
+    </footer>
 </body>
 </html>
