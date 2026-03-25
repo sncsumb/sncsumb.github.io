@@ -307,38 +307,6 @@ input {
     scroll-behavior: smooth;
 }
 
-
-/* Abilities */
-#hero-abilities-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #191619;
-    opacity: 90%;
-    height: 1440px;
-    width: 100%;
-}
-
-#hero-abilities-container * {
-    max-width: 100%;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 35px;
-    width: 100%;
-}
-
-.tab-button {
-    background-color: #191619;
-    /* width:685px; */
-    height: 210px;
-    border: none;
-    color: #C4BBB6;
-    flex: 1;
-}
-
 /* Credits Page */
 #credits-container {
     display: flex;

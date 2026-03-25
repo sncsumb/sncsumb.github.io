@@ -67,7 +67,6 @@ async function displayHeroPage() {
 
     hero_id = hero.id;
     console.log(hero.id);
-    // displayHeroAbilities(hero_id);
 }
 
 displayHeroPage();
